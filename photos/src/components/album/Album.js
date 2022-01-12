@@ -70,7 +70,7 @@ export function Album({ albumList, contents, loading, actions, ...props }) {
                 className="grid-item thumbnail-wrapper"
                 onClick={() => handleThumbnailClick(thumbnail)}
               >
-                <img src={thumbnail.url} alt={thumbnail.title} />
+                <img src={thumbnail.thumbnailUrl} alt={thumbnail.title} />
                 <div className="thumbnail-title">{thumbnail.title}</div>
               </motion.div>
             ))}
