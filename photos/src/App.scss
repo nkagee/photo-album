@@ -1,0 +1,47 @@
+.album-body {
+  height: calc(100vh - 60px);
+  box-sizing: border-box;
+  overflow: auto;
+
+  > div:first-child {
+    max-width: 960px;
+    min-width: 300px;
+
+    margin: 0 auto;
+  }
+
+  .page-title {
+    font-size: 2em;
+    text-align: center;
+    margin: 1.5em 0;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin: 1em;
+
+    box-sizing: border-box;
+
+    .grid-item {
+      height: auto;
+      position: relative;
+      box-sizing: border-box;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    a {
+      color: var(--primary-text);
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

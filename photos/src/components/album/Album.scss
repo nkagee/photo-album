@@ -1,0 +1,73 @@
+$black70: rgba(0, 0, 0, 0.7);
+$shadow: 0 0 3px $black70;
+
+.gallery-grid {
+  > div:hover {
+    cursor: pointer;
+  }
+}
+
+.gallery-modal {
+  background: $black70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 10;
+
+  .modal-photo-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .exit-modal-btn {
+      display: flex;
+      align-items: center;
+      align-self: flex-end;
+
+      color: var(--contrast-text);
+
+      border-radius: 50%;
+      padding: 0.5em;
+
+      transition: background 0.25s ease;
+
+      &:hover {
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    .photo-title {
+      color: var(--contrast-text);
+      font-size: 2em;
+      margin-bottom: 1em;
+      text-align: center;
+
+      text-shadow: $shadow;
+    }
+
+    img {
+      box-shadow: $shadow;
+      margin: 0 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .modal-photo-wrapper {
+    width: 100%;
+    padding: 0 2em;
+
+    img.photo {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
